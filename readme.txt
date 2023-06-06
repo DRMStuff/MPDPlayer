@@ -1,7 +1,7 @@
 ######################################################################################################
 #    PLEASE NOTE: NO SUPPORT GIVEN | INSTALL INSTRUCTIONS WILL BE SLIMELINED | SHARING IS CARING     #
 ######################################################################################################
-Installation MPDPlayer 2 & 3.0 (Lancar MOD)
+Installation MPDPlayer 2
 
 # IF YOU ARE HAVING STABILTY ISSUES WITH STREAMS USE V2 #
 
@@ -32,60 +32,31 @@ mount -t tmpfs -o size=1024M tmpfs /tmp/ramdisk
 4.
 Install your Deb package
 cd /home
-wget https://github.com/DRM-Scripts/MPD-Player/raw/master/mpd_player.deb
+wget https://github.com/DRMStuff/MPDPlayer/raw/master/mpd_player.deb
 dpkg -i mpd_player.deb
 
 After install mpdplayer start automatic
 
-#######################################
-# STOP HERE IF YOU WANT TO STAY ON V2 #
-#######################################
-
-Stop mpdplayer service systemctl stop mpdplayer
-
 5.
-Rename V2 files
-mv /opt/mpdplayer /opt/mpdplayer-old
-mv /etc/mpdplayer/mpd.conf /etc/mpdplayer/mpd-old.conf
-
-6.
-Download V3 files
-wget https://github.com/DRM-Scripts/MPD-Player/raw/master/mpdplayer.tar
-tar -xf mpdplayer.tar
-
-7.
-Copy new files
-cp -R mpdplayer /opt/mpdplayer
-cp mpd.conf /etc/mpdplayer
-
-8. 
 Web interface
 systemctl start mpdplayer
 http://127.0.0.1:8989/ui
 admin
 123
 
-9.
+6.
 Useful commands
 systemctl start mpdplayer
 systemctl stop mpdplayer
 systemctl restart mpdplayer
 
-10.
+7.
 If you want add auto restart
 crontab -e
 Please copy 
 0 5 * * /opt/mpdplayer/bin/restartService.sh
 I's mean every Morning at 5:00am mpdplayer going restart
 
-11.
-Don't take more 50 streams on server
-
-12.
-Enjoy and not sell solution. 
-
-13.
-Enjoy
 
 Thank you
 
